@@ -59,6 +59,11 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="uN4-0R-vSd" secondAttribute="trailing" constant="20" id="wUI-1g-Las"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="button" destination="uN4-0R-vSd" id="OVx-rH-Mde"/>
+                        <outlet property="myImageView" destination="5W8-54-WIk" id="212-0l-H5E"/>
+                        <outlet property="textField" destination="sbN-A3-sNH" id="yng-9f-0s2"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
