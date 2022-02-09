@@ -10,6 +10,9 @@
 		308A9EC8DC0EC47F50FF48FB /* Pods_QRCodeProject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0352E4DE2C0EC856906C1FE2 /* Pods_QRCodeProject.framework */; };
 		45E9FE3745DA81A70EF84575 /* Pods_QRCodeProjectTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ACEAC633F9921D961B2CF80D /* Pods_QRCodeProjectTests.framework */; };
 		515715A0089C1D9B1B0D675D /* Pods_QRCodeProject_QRCodeProjectUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 41FF6B2145DA96D9E9CE2F11 /* Pods_QRCodeProject_QRCodeProjectUITests.framework */; };
+		72A9807B27B4181F009BE27E /* HelperService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72A9807A27B4181F009BE27E /* HelperService.swift */; };
+		72A9807D27B41989009BE27E /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72A9807C27B41989009BE27E /* Constants.swift */; };
+		72A9807F27B41A67009BE27E /* Messages.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72A9807E27B41A67009BE27E /* Messages.swift */; };
 		72CB4E9B27B3F1CB00F35D2C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72CB4E9A27B3F1CB00F35D2C /* AppDelegate.swift */; };
 		72CB4E9D27B3F1CB00F35D2C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72CB4E9C27B3F1CB00F35D2C /* SceneDelegate.swift */; };
 		72CB4E9F27B3F1CB00F35D2C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72CB4E9E27B3F1CB00F35D2C /* ViewController.swift */; };
@@ -43,6 +46,9 @@
 		41FF6B2145DA96D9E9CE2F11 /* Pods_QRCodeProject_QRCodeProjectUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_QRCodeProject_QRCodeProjectUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		461CE20C93D56F236C3E5856 /* Pods-QRCodeProjectTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QRCodeProjectTests.debug.xcconfig"; path = "Target Support Files/Pods-QRCodeProjectTests/Pods-QRCodeProjectTests.debug.xcconfig"; sourceTree = "<group>"; };
 		4B9CAF849258F9A61A09E768 /* Pods-QRCodeProject-QRCodeProjectUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QRCodeProject-QRCodeProjectUITests.release.xcconfig"; path = "Target Support Files/Pods-QRCodeProject-QRCodeProjectUITests/Pods-QRCodeProject-QRCodeProjectUITests.release.xcconfig"; sourceTree = "<group>"; };
+		72A9807A27B4181F009BE27E /* HelperService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelperService.swift; sourceTree = "<group>"; };
+		72A9807C27B41989009BE27E /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		72A9807E27B41A67009BE27E /* Messages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Messages.swift; sourceTree = "<group>"; };
 		72CB4E9727B3F1CB00F35D2C /* QRCodeProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QRCodeProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		72CB4E9A27B3F1CB00F35D2C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		72CB4E9C27B3F1CB00F35D2C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -114,6 +120,24 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		72A9807927B4180D009BE27E /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				72A9807A27B4181F009BE27E /* HelperService.swift */,
+				72A9807C27B41989009BE27E /* Constants.swift */,
+				72A9807E27B41A67009BE27E /* Messages.swift */,
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
+		72A9808027B42016009BE27E /* View */ = {
+			isa = PBXGroup;
+			children = (
+				72CB4E9E27B3F1CB00F35D2C /* ViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		72CB4E8E27B3F1CB00F35D2C = {
 			isa = PBXGroup;
 			children = (
@@ -139,9 +163,10 @@
 		72CB4E9927B3F1CB00F35D2C /* QRCodeProject */ = {
 			isa = PBXGroup;
 			children = (
+				72A9808027B42016009BE27E /* View */,
+				72A9807927B4180D009BE27E /* Helper */,
 				72CB4E9A27B3F1CB00F35D2C /* AppDelegate.swift */,
 				72CB4E9C27B3F1CB00F35D2C /* SceneDelegate.swift */,
-				72CB4E9E27B3F1CB00F35D2C /* ViewController.swift */,
 				72CB4EA027B3F1CB00F35D2C /* Main.storyboard */,
 				72CB4EA327B3F1CC00F35D2C /* Assets.xcassets */,
 				72CB4EA527B3F1CC00F35D2C /* LaunchScreen.storyboard */,
@@ -407,8 +432,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				72CB4E9F27B3F1CB00F35D2C /* ViewController.swift in Sources */,
+				72A9807F27B41A67009BE27E /* Messages.swift in Sources */,
+				72A9807D27B41989009BE27E /* Constants.swift in Sources */,
 				72CB4E9B27B3F1CB00F35D2C /* AppDelegate.swift in Sources */,
 				72CB4E9D27B3F1CB00F35D2C /* SceneDelegate.swift in Sources */,
+				72A9807B27B4181F009BE27E /* HelperService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
